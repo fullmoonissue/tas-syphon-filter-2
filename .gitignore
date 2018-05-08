@@ -1,0 +1,6 @@
+# The config.lua file have to be copied from config.lua.dist then edited
+config.lua
+
+# Dumps are not kept
+dump/*
+!dump/.gitkeep
