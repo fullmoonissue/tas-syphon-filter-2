@@ -19,3 +19,43 @@ function MacroGame:hardMode(frame, iterations)
             }
     )
 end
+
+function MacroGame:roll(frame)
+    return self.input:add(
+            frame,
+            4,
+            {
+                [self.input.currentPlayer .. ' Circle'] = true,
+            }
+    )
+end
+
+function MacroGame:shoot(frame)
+    return self.input:add(
+            frame,
+            4,
+            {
+                [self.input.currentPlayer .. ' Square'] = true,
+            }
+    )
+end
+
+function MacroGame:reload(frame)
+    return self.input:add(
+            frame,
+            1,
+            {
+                [self.input.currentPlayer .. ' Triangle'] = true,
+            }
+    )
+end
+
+function MacroGame:nextWeapon(frame)
+    return self.input:add(
+            frame,
+            4,
+            {
+                [self.input.currentPlayer .. ' Select'] = true,
+            }
+    )
+end
